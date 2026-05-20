@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────
+   DESIGN TOKENS — Bizyness Design System
+   Single source of truth for all values.
+   Components must only reference these variables.
+   ───────────────────────────────────────────── */
+
+@theme inline {
+  /* ── Font family ── */
+  --font-poppins: 'Poppins', sans-serif;
+
+  /* ── Text sizes (size + line-height pairs) ── */
+  --text-h1: 3rem;                  /* 48px */
+  --text-h1--line-height: 3.5rem;   /* 56px */
+  --text-h2: 2.5rem;                /* 40px */
+  --text-h2--line-height: 3rem;     /* 48px */
+  --text-h3: 2rem;                  /* 32px */
+  --text-h3--line-height: 2.5rem;   /* 40px */
+  --text-h4: 1.75rem;               /* 28px — interpolated; verify against ds/ type scale */
+  --text-h4--line-height: 2.25rem;  /* 36px */
+  --text-h5: 1.5rem;                /* 24px */
+  --text-h5--line-height: 2rem;     /* 32px */
+  --text-h6: 1.25rem;               /* 20px */
+  --text-h6--line-height: 1.75rem;  /* 28px */
+  --text-root: 1rem;                /* 16px */
+  --text-root--line-height: 1.75rem;/* 28px */
+  --text-small: 0.875rem;           /* 14px */
+  --text-small--line-height: 1.5rem;/* 24px */
+  --text-caption: 0.75rem;          /* 12px */
+  --text-caption--line-height: 1.25rem; /* 20px */
+  --text-tiny: 0.6875rem;           /* 11px */
+  --text-tiny--line-height: 1rem;   /* 16px */
+
+  /* ── Brand colors ── */
+  --color-dark-blue: #212ADF;
+  --color-ultramarine: #7B68EE;
+  --color-dark-blue-deep: #120A36;
+  --color-global-default: #212b36;
+
+  /* ── Accent colors ── */
+  --color-fresh-lime: #70C039;
+  --color-emerald: #2BAC76;
+  --color-amber: #F8B836;
+  --color-scarlet: #FF3131;
+  --color-peach-red: #F78B8B;
+  --color-turquoise: #1FE7CF;
+  --color-desert-oak: #C9AB81;
+
+  /* ── Social brand colors ── */
+  --color-trustpilot: #00B67A;
+  --color-amazon: #FF9900;
+
+  /* ── Text colors ── */
+  --color-text-dark: #2E3A48;
+  --color-text-16: #232d3b;
+  --color-text-14: #46505d;
+  --color-text-13: #697482;
+  --color-text-white: #ffffff;
+
+  /* ── Background colors ── */
+  --color-bg-white: #ffffff;
+  --color-bg-near-white: #fcfcfd;
+  --color-bg-1: #FBFDFE;
+  --color-bg-2: #FCF5F3;
+  --color-bg-3: #F2F8F7;
+  --color-bg-4: #F8F8FC;
+  --color-bg-5: #F7F5F3;
+
+  /* ── Transparent — dark overlay ── */
+  --color-transparent-d5: #0000000d;
+  --color-transparent-d10: #0000001a;
+  --color-transparent-d80: #000000cc;
+
+  /* ── Transparent — light overlay ── */
+  --color-transparent-l5: #ffffff0d;
+  --color-transparent-l10: #ffffff1a;
+  --color-transparent-l80: #ffffffcc;
+
+  /* ── Spacing ── */
+  --spacing-0: 0px;
+  --spacing-4: 0.25rem;
+  --spacing-8: 0.5rem;
+  --spacing-12: 0.75rem;
+  --spacing-16: 1rem;
+  --spacing-20: 1.25rem;
+  --spacing-24: 1.5rem;
+  --spacing-32: 2rem;
+  --spacing-40: 2.5rem;
+  --spacing-48: 3rem;
+  --spacing-80: 5rem;
+
+  /* ── Corner radii ── */
+  --radius-square: 0px;
+  --radius-8: 0.5rem;
+  --radius-16: 1rem;
+  --radius-20: 1.25rem;
+  --radius-circle: 8rem;
+
+  /* ── Shadows ── */
+  --shadow-xs: 0 1px 2px #1018280a;
+  --shadow-m: 0 4px 6px -2px #10182808, 0 12px 16px -4px #1018280a;
+}
+
+/* ─────────────────────────────────────────────
+   BASE
+   ───────────────────────────────────────────── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-poppins);
+  color: var(--color-text-16);
+  background-color: var(--color-bg-white);
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* Utility: glass effect */
+.glass {
+  backdrop-filter: blur(23px);
+  -webkit-backdrop-filter: blur(23px);
+}
