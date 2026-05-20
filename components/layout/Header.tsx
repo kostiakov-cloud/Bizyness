@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 import { Container } from './Container'
@@ -29,13 +28,8 @@ export function Header() {
       >
         {/* Logo */}
         <Link href="/" className="shrink-0 flex items-center">
-          <Image
-            src="/logo_bizyness.svg"
-            alt="Bizyness"
-            width={140}
-            height={28}
-            priority
-          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo_bizyness.svg" alt="Bizyness" height={28} style={{ width: 'auto', height: '28px' }} />
         </Link>
 
         {/* Desktop nav — immediately to the right of logo */}
@@ -69,7 +63,8 @@ export function Header() {
             className="flex items-center gap-[var(--spacing-4)] px-[var(--spacing-8)] py-[var(--spacing-8)] text-text-14 font-medium font-poppins rounded-[var(--radius-8)] hover:bg-[var(--color-transparent-d5)] transition-colors"
             style={{ fontSize: 'var(--text-small)' }}
           >
-            <Image src="/icon_uk_flag.svg" alt="UK" width={18} height={18} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/icon_uk_flag.svg" alt="UK" width={24} height={24} style={{ width: '24px', height: '24px' }} />
             En
             <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
               <path d="M1.5 3.5l3.5 3.5 3.5-3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />

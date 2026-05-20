@@ -14,9 +14,9 @@ const base =
 
 export const buttonVariants: Record<Variant, string> = {
   primary:
-    'bg-dark-blue text-[var(--color-text-white)] rounded-circle hover:opacity-90 active:scale-[0.98]',
+    'bg-dark-blue text-white rounded-circle hover:opacity-90 active:scale-[0.98]',
   secondary:
-    'bg-transparent text-dark-blue border border-dark-blue rounded-circle hover:bg-dark-blue hover:text-[var(--color-text-white)] active:scale-[0.98]',
+    'bg-transparent text-dark-blue border border-dark-blue rounded-circle hover:bg-dark-blue hover:text-white active:scale-[0.98]',
   ghost:
     'bg-transparent text-text-16 hover:text-dark-blue active:scale-[0.98]',
   outline:
@@ -24,9 +24,9 @@ export const buttonVariants: Record<Variant, string> = {
 }
 
 export const buttonSizes: Record<Size, string> = {
-  sm: 'px-[var(--spacing-16)] py-[var(--spacing-4)] text-caption',
-  md: 'px-[var(--spacing-20)] py-[var(--spacing-8)] text-small',
-  lg: 'px-[var(--spacing-32)] py-[var(--spacing-16)] text-root',
+  sm: 'px-[var(--spacing-16)] py-[var(--spacing-4)] text-[length:var(--text-caption)] leading-[var(--text-caption--line-height)]',
+  md: 'px-[var(--spacing-20)] py-[var(--spacing-8)] text-[length:var(--text-small)] leading-[var(--text-small--line-height)]',
+  lg: 'px-[var(--spacing-32)] py-[var(--spacing-16)] text-[length:var(--text-root)] leading-[var(--text-root--line-height)]',
 }
 
 export function buttonCn(variant: Variant = 'primary', size: Size = 'md', className?: string) {
