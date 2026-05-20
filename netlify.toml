@@ -1,4 +1,3 @@
 [build]
-  base = "bizyness-landing"
-  command = "npm run build"
+  command = "cd bizyness-landing && npm install && npm run build"
   publish = "bizyness-landing/dist"
